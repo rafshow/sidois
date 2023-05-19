@@ -8,9 +8,11 @@ function tocaSom(seletorAudio) {
   for (let i = 0; i < listadeTeclas.length; i++) {
     const tecla = listadeTeclas[i];
     
-    tecla.onclick = function() {
+    tecla.onclick = function(event) {
+      
       tocaSom('./static/assets/barulho urna.mp3');
-      console.log('Obrigado por ter votado!')
+      console.log('Obrigado por ter votado!');
     }
     
   }
+
