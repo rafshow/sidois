@@ -13,21 +13,24 @@
     <main>
         <h1 class="titulo">Eleições 2023</h1>
         <section class="images">
-            <button class="image-button lula">
-            <img class="imagem img_lula" src="./static/assets/Lula.jpg" alt="foto presidente lula">
-            </button>
-            <button class="image-button bolsonaro">
-            <img class="imagem img_bolsonaro" src="./static/assets/Bolsonaro.jpg" alt="foto bolsonaro">
-            </button>
-            <button class="image-button tiririca">
-            <img class="imagem img_tiririca" src="./static/assets/Tiririca.jpg" alt="foto tiririca">
-            </button>
-            <button class="image-button eduardo">
-            <img class="imagem img_eduardo" src="./static/assets/eduardo.jpg" alt="foto eduardo">
-            </button>
-            <button class="image-button romario">
-            <img class="imagem img_romario" src="./static/assets/Romario.jpg" alt="foto Romário">
-            </button>
+            <form action="/votar" method="POST">
+                <button class="image-button" name="candidato" value="Lula">
+                    <img class="imagem" src="./static/assets/Lula.jpg" alt="foto presidente lula">
+                </button>
+                <button class="image-button" name="candidato" value="Bolsonaro">
+                    <img class="imagem" src="./static/assets/Bolsonaro.jpg" alt="foto bolsonaro">
+                </button>
+                <button class="image-button" name="candidato" value="Tiririca">
+                    <img class="imagem" src="./static/assets/Tiririca.jpg" alt="foto tiririca">
+                </button>
+                <button class="image-button" name="candidato" value="Eduardo">
+                    <img class="imagem" src="./static/assets/eduardo.jpg" alt="foto eduardo">
+                </button>
+                <button class="image-button" name="candidato" value="Romario">
+                    <img class="imagem" src="./static/assets/Romario.jpg" alt="foto Romário">
+                </button>
+                <a href="/resultados" class="resultado-button">Ver Resultados</a>
+            </form>
         </section>
 
         <audio src="./static/assets/barulho urna.mp3" id="som urna"></audio>

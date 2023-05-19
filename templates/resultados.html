@@ -11,11 +11,19 @@
     <header></header>
     <main>
         <h1 class="titulo">Resultado Eleições 2023</h1>
-        <section>      
-        </section>
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username">
-
+        <table>
+            <tr>
+                <th>Candidato</th>
+                <th>Votos</th>
+            </tr>
+            {% for candidato, votos in votos.items() %}
+            <tr>
+                <td>{{ candidato }}</td>
+                <td>{{ votos }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <a href="/">Voltar</a>
         <script src="./static/main.js"></script>
 
     </main>
