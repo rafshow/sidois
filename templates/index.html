@@ -5,12 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Votacao</title>
-    <link rel="stylesheet" href="./static/styles.css"
+    <link rel="stylesheet" href="./static/styles.css">
+    <style>
+            body {
+                {% if cookieColor != None %}
+                background-color: {{ cookieColor }};
+                {% else %}
+                background-color: #FFFFFF;
+                {% endif %}
+            }
+        </style>
 </head>
 
 <body>
     <header></header>
     <main>
+        
+
         <h1 class="titulo">Eleições 2023</h1>
         <section class="images">
             <form action="/votar" method="POST">
@@ -29,7 +40,7 @@
                 <button class="image-button" name="candidato" value="Romario">
                     <img class="imagem" src="./static/assets/Romario.jpg" alt="foto Romário">
                 </button>
-                <a href="/resultados" class="resultado-button">Ver Resultados</a>
+                <a href="/resultados" class="resultado-button voltar">Ver Resultados</a>
             </form>
         </section>
 
